@@ -37,10 +37,10 @@ export default function AboutSection() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,168,76,0.03)_0%,transparent_60%)]" />
 
         {/* Centered Philosopher Background Image */}
-        <div 
+        {/* <div 
           className="absolute inset-0 w-full h-full opacity-15 mix-blend-screen bg-[url('/images/philosopher.jpg')] bg-contain bg-center bg-no-repeat"
-        />
-        
+        /> */}
+
         {/* Blending gradients to fade the top and bottom effectively */}
         <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-transparent to-obsidian" />
         <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-transparent to-obsidian" />

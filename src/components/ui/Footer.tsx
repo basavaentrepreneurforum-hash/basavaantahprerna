@@ -51,6 +51,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/founder"
+                  className="text-ivory/50 hover:text-champagne text-sm transition-colors no-underline"
+                >
+                  Founder
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/explore"
                   className="text-ivory/50 hover:text-champagne text-sm transition-colors no-underline"
                 >
@@ -76,11 +84,11 @@ export default function Footer() {
             <ul className="space-y-2.5 list-none p-0 m-0 text-sm text-ivory/50">
               <li className="flex items-start gap-2">
                 <span className="text-champagne/60 mt-0.5">✉</span>
-                <span>contact@basavaantahprerna.in</span>
+                <span>basavaentrepreneurforum@gmail.com</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-champagne/60 mt-0.5">☎</span>
-                <span>+91 98765 43210</span>
+                <span>+91 88610 93367</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-champagne/60 mt-0.5">⌖</span>
@@ -92,13 +100,23 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="h-px bg-ivory/5" />
-        <div className="py-5 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-ivory/30">
+        <div className="py-5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-ivory/30">
           <p className="m-0">
             © {currentYear} Basava Antah Prerna. All rights reserved.
           </p>
-          <p className="m-0 font-drama text-ivory/20">
-            &ldquo;Work is worship&rdquo; — Basavanna
-          </p>
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+            <p className="m-0 tracking-widest uppercase text-[10px]">
+              Powered by{" "}
+              <a
+                href="https://www.buildyourscript.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-champagne/60 hover:text-champagne transition-colors duration-300 font-bold decoration-dotted underline-offset-4"
+              >
+                Build Your Script
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

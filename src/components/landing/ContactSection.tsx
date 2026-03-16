@@ -56,10 +56,10 @@ export default function ContactSection() {
                   Phone
                 </h4>
                 <a
-                  href="tel:+919876543210"
-                  className="text-slate-muted text-sm no-underline hover:text-champagne transition-colors"
+                  href="tel:+918861093367"
+                  className="text-slate text-sm no-underline hover:text-champagne transition-colors"
                 >
-                  +91 98765 43210
+                  +91 88610 93367
                 </a>
               </div>
             </div>
@@ -74,10 +74,10 @@ export default function ContactSection() {
                   Email
                 </h4>
                 <a
-                  href="mailto:contact@basavaantahprerna.in"
+                  href="mailto:basavaentrepreneurforum@gmail.com"
                   className="text-slate-muted text-sm no-underline hover:text-champagne transition-colors"
                 >
-                  contact@basavaantahprerna.in
+                  basavaentrepreneurforum@gmail.com
                 </a>
               </div>
             </div>
@@ -92,11 +92,11 @@ export default function ContactSection() {
                   Address
                 </h4>
                 <p className="text-slate-muted text-sm m-0 leading-relaxed">
-                  123, Community Center Road,
+                  No. 15, 7th cross, kanakadasa road, Kadirenahalli,
                   <br />
-                  Basavanagudi, Bengaluru,
+                  Subramanya Pura main road, Bangalore
                   <br />
-                  Karnataka 560004, India
+                  Karnataka 560070, India
                 </p>
               </div>
             </div>
@@ -122,7 +122,7 @@ export default function ContactSection() {
             <div className="rounded-xl overflow-hidden border border-slate/[0.06] shadow-sm h-72 md:h-full min-h-[280px]">
               <iframe
                 title="Basava Antah Prerna Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5959!2d77.5696!3d12.9416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU2JzI5LjgiTiA3N8KwMzQnMTAuNiJF!5e0!3m2!1sen!2sin!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8947608249546!2d77.5613182769205!3d12.914484987395701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15366612b83f%3A0xcb8448c89cd2556d!2sMAVRICK%20DEVELOPERS%20AND%20DESIGNERS%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1773669403576!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

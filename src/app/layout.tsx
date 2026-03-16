@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
@@ -24,9 +24,16 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#0D0D12",
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export const metadata: Metadata = {
   title: {
-    default: "Basava Antah Prerna — Veerashaiva Lingayat Business Directory",
+    default: "Hindu Veerashaiva Lingayat Entrepreneur Forum",
     template: "%s | Basava Antah Prerna",
   },
   description:
@@ -41,13 +48,17 @@ export const metadata: Metadata = {
   ],
   metadataBase: new URL("https://basavaantahprerna.in"),
   openGraph: {
-    title: "Basava Antah Prerna — Veerashaiva Lingayat Business Directory",
+    title: "Hindu Veerashaiva Lingayat Entrepreneur Forum",
     description:
       "Connect with verified Veerashaiva Lingayat professionals. List your business and grow your community network.",
     url: "https://basavaantahprerna.in",
     siteName: "Basava Antah Prerna",
     locale: "en_IN",
     type: "website",
+  },
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 
@@ -58,7 +69,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${jetbrains.variable}`}>
-      <body className="antialiased">
+      <body className="antialiased bg-obsidian text-ivory">
         <SessionProvider>
           <Navbar />
           <main>{children}</main>

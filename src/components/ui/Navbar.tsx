@@ -102,12 +102,25 @@ export default function Navbar() {
           >
             Contact
           </Link>
-          <Link href="/explore" className="btn btn-outline text-xs py-2 px-4">
-            Explore Businesses
-          </Link>
-          <Link href="/get-listed" className="btn btn-primary text-xs py-2 px-4">
-            Get Listed
-          </Link>
+          {/* Services Dropdown */}
+          <div className="relative group">
+            <button className="text-ivory/70 hover:text-champagne text-sm font-medium transition-colors no-underline flex items-center gap-1.5 cursor-pointer bg-transparent border-none py-2">
+              Services
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-70 group-hover:rotate-180 transition-transform duration-300"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div className="absolute top-full right-0 mt-2 w-56 bg-obsidian-lighter border border-champagne/10 rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.8)] py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 scale-95 group-hover:scale-100 origin-top-right z-50">
+              <div className="absolute -top-4 left-0 w-full h-4" />
+              <Link href="/explore" className="block px-4 py-2.5 text-ivory/70 text-xs hover:text-champagne hover:bg-champagne/5 transition-colors no-underline">
+                Explore Businesses
+              </Link>
+              <Link href="/get-listed" className="block px-4 py-2.5 text-ivory/70 text-xs hover:text-champagne hover:bg-champagne/5 transition-colors no-underline">
+                Get Listed
+              </Link>
+              <Link href="/get-listed?profession=Family+Counselling" className="block px-4 py-2.5 text-champagne/90 text-xs hover:text-champagne hover:bg-champagne/5 transition-colors no-underline font-medium">
+                Offer Family Counselling
+              </Link>
+            </div>
+          </div>
 
           {/* Authentication (desktop) */}
           {session ? (
@@ -267,20 +280,27 @@ export default function Navbar() {
           Contact
         </Link>
 
-        <div className="flex flex-col gap-3 mt-4 w-56">
+        <div className="flex flex-col gap-3 mt-4 w-64">
           <Link
             href="/explore"
             onClick={() => setIsOpen(false)}
-            className="btn btn-outline text-sm text-center"
+            className="btn btn-outline text-sm text-center px-4 py-3"
           >
             Explore Businesses
           </Link>
           <Link
             href="/get-listed"
             onClick={() => setIsOpen(false)}
-            className="btn btn-primary text-sm text-center"
+            className="btn btn-primary text-sm text-center px-4 py-3"
           >
             Get Listed
+          </Link>
+          <Link
+            href="/get-listed?profession=Family+Counselling"
+            onClick={() => setIsOpen(false)}
+            className="btn btn-outline text-champagne border-champagne/30 bg-champagne/5 hover:bg-champagne/10 text-sm text-center px-4 py-3"
+          >
+            Offer Family Counselling
           </Link>
         </div>
 

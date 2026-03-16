@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function FounderPage() {
   return (
-    <div className="relative min-h-screen bg-obsidian text-ivory pt-24 pb-16 px-5 overflow-hidden">
+    <div className="relative min-h-[100dvh] bg-obsidian text-ivory pt-24 pb-16 px-5 overflow-hidden">
       {/* Dark Base Background */}
       <div className="absolute inset-0 bg-obsidian" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,168,76,0.05)_0%,transparent_70%)] pointer-events-none" />
@@ -13,14 +13,6 @@ export default function FounderPage() {
       {/* Content Container */}
       <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col pt-10">
 
-        {/* Eyebrow */}
-        <div className="flex items-center gap-3 mb-6">
-          <span className="block w-8 h-px bg-champagne/40" />
-          <span className="text-champagne/70 text-xs font-semibold uppercase tracking-[0.2em] font-data">
-            Founder&apos;s Message
-          </span>
-        </div>
-
         {/* Headline */}
         <h1 className="text-white text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight mb-8">
           Building a <br />
@@ -29,49 +21,84 @@ export default function FounderPage() {
           </span>
         </h1>
 
-        {/* Layout: Image + Forum Message */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        {/* Layout Container */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
 
-          {/* Founder Image */}
-          <div className="lg:col-span-5 order-2 lg:order-1 relative rounded-2xl overflow-hidden border border-champagne/10 shadow-[0_8px_32px_rgba(0,0,0,0.8)] aspect-[4/5] sm:max-w-md mx-auto w-full group">
-            <div className="absolute inset-0 bg-obsidian/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
-            <img
-              src="/images/founder.jpg"
-              alt="Arpitha S Sarathi, Founder"
-              className="w-full h-full object-cover object-top filter contrast-110"
-            />
+          {/* Left Column: Image + ID (for mobile) */}
+          <div className="lg:col-span-5 flex flex-col gap-6">
+            {/* Founder Image */}
+            <div className="relative rounded-2xl overflow-hidden border border-champagne/10 shadow-[0_8px_32px_rgba(0,0,0,0.8)] aspect-[4/5] w-full group">
+              <div className="absolute inset-0 bg-obsidian/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
+              <img
+                src="/images/founder.jpg"
+                alt="Arpitha S Sarathi, Founder"
+                className="w-full h-full object-cover object-top filter contrast-110"
+              />
+            </div>
+
+            {/* Mobile Only: Name and Designation (per request) */}
+            <div className="lg:hidden bg-white/[0.03] backdrop-blur-md p-6 rounded-2xl border border-white/5 space-y-4">
+              <div>
+                <span className="font-drama text-champagne text-3xl tracking-wide drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">ARPITHA S SARATHI</span>
+                <p className="text-white/60 text-xs uppercase tracking-[0.2em] font-bold mt-2">B.A., LL.B.</p>
+              </div>
+
+              <div className="space-y-3 text-sm text-white/70">
+                <p className="flex items-start gap-3">
+                  <span><span className="text-champagne font-bold">Director,</span> Mavrick Developers & Designers Pvt. Ltd.</span>
+                </p>
+                <p className="flex items-start gap-3">
+                  <span><span className="text-champagne font-bold">General Secretary,</span> All India Veerashaiva Lingayata Mahasabha (Padmanabha Nagar)</span>
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* The Message Body */}
-          <article className="lg:col-span-7 order-1 lg:order-2 prose prose-invert prose-lg max-w-none text-white/80 space-y-6 leading-relaxed bg-[rgba(13,13,18,0.5)] backdrop-blur-md p-6 sm:p-10 rounded-2xl border border-champagne/10 shadow-2xl">
-            <p className="text-xl font-light text-white/90">
-              The Hindu Veerashaiva Lingayat Entrepreneur Forum has been established with the vision of empowering startups and business entrepreneurs across Karnataka by creating opportunities for financial growth, collaboration, and mutual support.
-            </p>
+          {/* Right Column: Founder's Message */}
+          <div className="lg:col-span-7 flex flex-col">
+            {/* Eyebrow */}
+            <div className="flex items-center gap-3 mb-6">
+              <span className="block w-8 h-px bg-champagne/40" />
+              <span className="text-champagne/70 text-xs font-semibold uppercase tracking-[0.2em] font-data">
+                Founder&apos;s Message
+              </span>
+            </div>
 
-            <p>
-              At the same time, the forum aims to strengthen the cultural and spiritual roots of our Hindu Dharma and the Veerashaiva Lingayat community by building meaningful connections among like-minded individuals.
-            </p>
+            {/* The Message Body */}
+            <article className="prose prose-invert prose-lg max-w-none text-white/80 space-y-6 leading-relaxed bg-[rgba(13,13,18,0.5)] backdrop-blur-md p-6 sm:p-10 rounded-2xl border border-champagne/10 shadow-2xl">
+              <p className="text-xl font-light text-white/90">
+                The Hindu Veerashaiva Lingayat Entrepreneur Forum has been established with the vision of empowering startups and business entrepreneurs across Karnataka by creating opportunities for financial growth, collaboration, and mutual support.
+              </p>
 
-            <p>
-              This platform stands as a bridge of support from one Hindu Veerashaiva Lingayat to another, from one entrepreneur to another, and from one individual who values humanity to another who respects and upholds it.
-            </p>
+              <p>
+                At the same time, the forum aims to strengthen the cultural and spiritual roots of our Hindu Dharma and the Veerashaiva Lingayat community by building meaningful connections among like-minded individuals.
+              </p>
 
-            <p>
-              Through unity, shared knowledge, and collective progress, the forum strives to foster growth, integrity, and prosperity within the community and beyond.
-            </p>
+              <p>
+                This platform stands as a bridge of support from one Hindu Veerashaiva Lingayat to another, from one entrepreneur to another, and from one individual who values humanity to another who respects and upholds it.
+              </p>
 
-            <p>
-              The Hindu Veerashaiva Lingayat Entrepreneur Forum expresses its deep concern for the well-being of families and the social harmony within our community. In light of the increasing number of divorce cases, the Forum has decided to initiate a Counselling Support Program aimed at helping couples address their concerns and strengthen their relationships.
-            </p>
+              <p>
+                Through unity, shared knowledge, and collective progress, the forum strives to foster growth, integrity, and prosperity within the community and beyond.
+              </p>
 
-            <p>
-              As part of this initiative, a panel of experienced counsellors will be made available through the Counselling section on the Forum’s website. Couples who wish to seek guidance or assistance may visit the website, choose a counsellor of their preference, and schedule a session at their convenience.
-            </p>
+              <p>
+                The Hindu Veerashaiva Lingayat Entrepreneur Forum expresses its deep concern for the well-being of families and the social harmony within our community. In light of the increasing number of divorce cases, the Forum has decided to initiate a Counselling Support Program aimed at helping couples address their concerns and strengthen their relationships.
+              </p>
 
-            <p className="font-drama text-2xl text-champagne italic pt-6 border-t border-white/5">
-              "NEVER LOSE A HEART WHILE PURSUING THE PATH OF TRUST, LIVE A PRINCIPLED LIFE”. – BASAVANNA
-            </p>
-          </article>
+              <p>
+                As part of this initiative, a panel of experienced counsellors will be made available through the Counselling section on the Forum’s website. Couples who wish to seek guidance or assistance may visit the website, choose a counsellor of their preference, and schedule a session at their convenience.
+              </p>
+
+              <p>
+                This initiative is undertaken with the intention of promoting understanding, mutual respect, and the preservation of strong family values within our society.
+              </p>
+
+              <p className="font-drama text-2xl text-champagne italic pt-6 border-t border-white/5">
+                "NEVER LOSE A HEART WHILE PURSUING THE PATH OF TRUST, LIVE A PRINCIPLED LIFE”. – BASAVANNA
+              </p>
+            </article>
+          </div>
         </div>
 
         {/* Section 2: About the Founder Bio */}
@@ -79,23 +106,30 @@ export default function FounderPage() {
           <div className="relative bg-[rgba(13,13,18,0.5)] backdrop-blur-md p-6 sm:p-10 lg:p-14 rounded-3xl border border-champagne/10 shadow-2xl">
             {/* Subtle Top Glow for Bio Section */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-champagne/30 to-transparent" />
-            
+
             <div className="text-center mb-10">
+              {/* Mobile Only: Circular Photo in Bio */}
+              <div className="sm:hidden flex justify-center mb-8">
+                <div className="w-32 h-32 rounded-full border-[3px] border-champagne/20 ring-4 ring-white/5 overflow-hidden shadow-2xl">
+                  <img src="/images/founder.jpg" alt="Founder" className="w-full h-full object-cover object-top" />
+                </div>
+              </div>
+
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">About the Founder</h2>
-              <h3 className="font-drama text-champagne text-2xl tracking-wide drop-shadow-md">ARPITHA S SARATHI</h3>
-              
-              <div className="text-white/60 text-xs sm:text-sm uppercase tracking-wide mt-4 font-data space-y-2 inline-block text-left mx-auto">
+              <span className="font-drama text-champagne text-2xl tracking-wide drop-shadow-md">ARPITHA S SARATHI</span>
+              <p className="text-white/60 text-xs uppercase tracking-[0.2em] font-bold mt-2">B.A., LL.B.</p>
+
+
+              <div className="hidden sm:inline-block text-white/60 text-xs sm:text-sm uppercase tracking-wide mt-4 font-data space-y-2 text-left mx-auto">
                 <p className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-champagne block" />
-                  <span className="text-white/80 font-bold">Director,</span> Mavrick Developers & Designers Pvt. Ltd.
+                  <span className="text-champagne font-bold">Director,</span> Mavrick Developers & Designers Pvt. Ltd.
                 </p>
                 <p className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-champagne block" />
-                  <span className="text-white/80 font-bold">General Secretary,</span> All India Veerashaiva Lingayata Mahasabha (Padmanabha Nagar)
+                  <span className="text-champagne font-bold">General Secretary,</span> All India Veerashaiva Lingayata Mahasabha (Padmanabha Nagar)
                 </p>
               </div>
             </div>
-            
+
             <article className="prose prose-invert prose-lg max-w-4xl mx-auto text-white/80 space-y-6 leading-relaxed">
               <p>
                 With a strong academic foundation in law through the five-year integrated B.A., LL.B. course, I had the privilege of interning with the Ministry of Law and Justice and the Ministry of Commerce and Industry, Government of India, New Delhi, where I gained valuable exposure to the functioning of central government institutions, the evolving legal and policy framework of the country and the regulatory and commercial dynamics shaping business and industry in India. I bring over seven years of litigation experience to my professional journey. After building a strong foundation in legal practice, I have now expanded my professional horizon by venturing into the real estate sector and establishing a company by name M/s. Mavrick Developers and Designers Pvt. Ltd., a company committed to providing end-to-end real estate solutions under one roof.
